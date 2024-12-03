@@ -36,6 +36,16 @@
 #include "Async/Async.h"
 #include "HAL/RunnableThread.h"
 
+// Mooa HoudiniLiveLink
+#include "Misc/EngineVersionComparison.h"
+
+#if UE_VERSION_NEWER_THAN(5, 5, 0)
+	#include "Dom/JsonObject.h"
+	#include "Serialization/JsonReader.h"
+	#include "Serialization/JsonSerializer.h"
+#endif
+// Mooa End
+
 #define LOCTEXT_NAMESPACE "HoudiniLiveLinkSource"
 
 #define RECV_BUFFER_SIZE 1024 * 1024
